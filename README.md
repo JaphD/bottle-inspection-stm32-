@@ -72,9 +72,12 @@ This project demonstrates a complete embedded system that **inspects bottles**, 
 
 ```plaintext
 bottle-inspection-stm32/
-├── interfacing proj.pdsprj      # Proteus project file
+├── bottle_inspection.pdsprj      # Proteus project file
+├── schematic.pdschematic         # Proteus schematic file
 ├── main.c                        # STM32 firmware source code
-├── MICRO.hex                   # Compiled firmware for Proteus simulation
+├── program.hex                   # Compiled firmware for Proteus simulation
+├── lcd_lib.h                     # LCD driver library (by Fatay)
+├── lcd_config.h                  # Pin configuration for the LCD
 ├── README.md
 
 ▶️ How to Run the Simulation in Proteus
@@ -95,4 +98,11 @@ Press Play in Proteus.
 Rotate the potentiometer to simulate different water levels.
 
 Use the push button to test halt/resume functionality.
+
+🧾 Credits
+lcd_lib.h was written by Fatay — a lightweight custom driver library for 16x2 LCDs.
+
+Minor adaptations were made to integrate it with this STM32F103C6 project.
+
+GPIO assignments are managed in lcd_config.h.
 
